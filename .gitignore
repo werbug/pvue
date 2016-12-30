@@ -2,3 +2,5 @@
 /a.txt
 #忽略sevenflower下的node_modules
 /sevenflower/node_modules/
+#hu
+/b.txt
