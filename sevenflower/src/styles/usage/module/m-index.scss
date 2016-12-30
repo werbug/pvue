@@ -1,18 +1,14 @@
 @charset "utf-8";
 @import './common.scss';
 .m-index{
-    //display: flex;
-    //flex-direction: column;
     @include flexbox();
     @include flex-direction(column);
-
     height:100%;
     header{
         height:.44rem;
         background: $base-color;
         ul{
             @include flexbox();
-            
             height: 100%;
             li:first-child,
             li:last-child{
@@ -34,16 +30,46 @@
                     color: #fff;
                     font-size: .24rem;
                 }
-
-
             }
         }
     }
     section{
-        background: gray;
-        //flex:1;
-        @include flex();
+        background: #fff;
+        overflow-y: scroll;
         width: 100%;
+        height: 100%;
+        ul{
+            @include flexbox();
+//          @include flex();
+            @include flex-wrap(wrap);
+            width: 100%;
+            height: 100%;
+            li{
+                width:33.33%;
+                height: 33.33%;
+                @include flexbox();
+                @include flex-direction(column);
+                @include justify-content();
+                @include align-items();
+                a{
+                    display: block;
+                    width: 100%;
+                    @include flexbox();
+                    @include justify-content();
+                    img{
+                        display: block;
+                        width: .52rem;
+                        height: .52rem; 
+                    }
+                }
+                b{
+                    display: block; 
+                    margin-top: .08rem;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
     }
     footer{
         height:.44rem;

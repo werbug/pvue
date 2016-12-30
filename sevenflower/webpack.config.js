@@ -33,7 +33,7 @@ module.exports = {
 				loader:ET.extract('style','css!sass')
 			},
 			{
-				test:/\.string/,
+				test:/\.html/,
 				loader:'string'
 			}
 		]

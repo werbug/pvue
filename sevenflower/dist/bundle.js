@@ -49,7 +49,7 @@
 	//引入样式文件
 	__webpack_require__(1);
 	var common = __webpack_require__(5);
-	var html = __webpack_require__(6);
+	var html = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./scripts/tpls/classify.html\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	common.render(html);
 
 /***/ },
@@ -75,12 +75,6 @@
 	};
 	
 	module.exports = common;
-
-/***/ },
-/* 6 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"m-index\">	<header>		<ul>			<li class=\"yo-ico\"></li>			<li>				<a href=\"#\">七彩鲜花</a>			</li>			<li class=\"yo-ico\"></li>		</ul>	</header>	<section>	</section>	<footer>	</footer></div>"
 
 /***/ }
 /******/ ]);
