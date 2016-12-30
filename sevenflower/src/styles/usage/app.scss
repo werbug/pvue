@@ -1,5 +1,6 @@
-@charset "utf-8";
-//引入样式重置
-@import "./core/reset.scss";
-@import "./module/m-index.scss";
+@charset "UTF-8";
 
+@import "./core/reset";
+
+// module
+@import "./module/m-index";

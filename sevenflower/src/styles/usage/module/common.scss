@@ -1,16 +1,19 @@
-@font-face {font-family: "yofont";
-  src: url('/images/fonts/iconfont.eot?t=1482995700736'); /* IE9*/
-  src: url('/images/fonts/iconfont.eot?t=1482995700736#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('/images/fonts/iconfont.woff?t=1482995700736') format('woff'), /* chrome, firefox */
-  url('/images/fonts/iconfont.ttf?t=1482995700736') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('/images/fonts/iconfont.svg?t=1482995700736#iconfont') format('svg'); /* iOS 4.1- */
-}
+$base-color: #0dc441;
+
 @font-face {
-  font-family: 'yofont';  /* project id 211839 */
-  src: url('//at.alicdn.com/t/font_nvapsyyktp722o6r.eot');
-  src: url('//at.alicdn.com/t/font_nvapsyyktp722o6r.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_nvapsyyktp722o6r.woff') format('woff'),
-  url('//at.alicdn.com/t/font_nvapsyyktp722o6r.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_nvapsyyktp722o6r.svg#iconfont') format('svg');
+  font-family: "yofont";
+  src: url('/images/fonts/iconheader.eot?t=1482995686824'); /* IE9*/
+  src: url('/images/fonts/iconheader.eot?t=1482995686824#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('/images/fonts/iconheader.woff?t=1482995686824') format('woff'), /* chrome, firefox */
+  url('/images/fonts/iconheader.ttf?t=1482995686824') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('/images/fonts/iconheader.svg?t=1482995686824#iconfont') format('svg'); /* iOS 4.1- */
 }
-$base-color:#dd2727;
+
+@font-face {
+  font-family: 'yofont';
+  src: url('/images/fonts/iconfooter.eot');
+  src: url('/images/fonts/iconfooter.eot?#iefix') format('embedded-opentype'),
+  url('/images/fonts/iconfooter.woff') format('woff'),
+  url('/images/fonts/iconfooter.ttf') format('truetype'),
+  url('/images/fonts/iconfooter.svg#iconfont') format('svg');
+}
