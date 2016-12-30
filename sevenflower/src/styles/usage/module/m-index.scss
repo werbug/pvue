@@ -1,0 +1,55 @@
+@charset "utf-8";
+@import './common.scss';
+.m-index{
+    //display: flex;
+    //flex-direction: column;
+    @include flexbox();
+    @include flex-direction(column);
+
+    height:100%;
+    header{
+        height:.44rem;
+        background: $base-color;
+        ul{
+            @include flexbox();
+            
+            height: 100%;
+            li:first-child,
+            li:last-child{
+                width: .44rem;
+                height: 100%;
+                line-height: .44rem;
+                text-align:center;
+                color:#fff;
+                font-size: .24rem;
+
+            }
+            li:first-child:before { content: "\e6f2"; }
+            li:last-child{
+                &:before { content: "\e618"; }
+            }
+            li:nth-child(2){
+                @include flex();
+                a{
+                    color: #fff;
+                    font-size: .24rem;
+                }
+
+
+            }
+        }
+    }
+    section{
+        background: gray;
+        //flex:1;
+        @include flex();
+        width: 100%;
+    }
+    footer{
+        height:.44rem;
+        background: black;
+    }
+    > * {
+        width: 100%;
+    }
+}
