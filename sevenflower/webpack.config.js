@@ -34,7 +34,7 @@ module.exports = {
 				loader:ET.extract('style','css!sass')
 			},
 			{
-				test:/\.string/,
+				test:/\.html$/,
 				loader:'string'
 			}
 		]
@@ -42,7 +42,7 @@ module.exports = {
 	
 	devServer:{
 		contentBase: __dirname + '/dist',
-		port:80,
+		port:8080,
 		host:'localhost',
 		proxy:{
 			'/api':{
