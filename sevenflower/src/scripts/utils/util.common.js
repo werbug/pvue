@@ -4,5 +4,4 @@ var common = {
     body.innerHTML = str + body.innerHTML;
   }
 }
-
 module.exports = common;
