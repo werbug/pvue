@@ -5,7 +5,7 @@ var ET = require('extract-text-webpack-plugin');
 
 module.exports = {
 	//不写./会报错
-	entry: __dirname + '/src/app.js',
+	entry: __dirname + /\/src\/\.js$/,
 	output: {
 		//__dirname:当前文件夹
 		path: __dirname + '/dist/',
