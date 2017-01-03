@@ -1,0 +1,54 @@
+<div class="m-list" id="m-list">
+  <div class="l-header">
+    <ul>
+    	<li class="yo-ico">&#xe7ec;</li>
+    	<li>分类列表</li>
+    </ul>
+  </div>
+   
+  <div class="l-section">
+  	<div class="l-nav">
+	  	<ul>
+	  		<li v-for="(item, index) in nav" @click="changeNav(index)"><b :class="{active: index==nIndex}">{{item}}</b></li>
+	  	</ul>
+	  </div>
+    <ul id="list">
+    	<li class="yo-ico" @click="changeTab(index)" :class="{active: index==Index}" v-for="(item, index) in listtl">{{item}}&nbsp;&#xe65e;</li>
+    </ul>
+    <div class="swiper-container" id="index-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" id="index-scroll">
+        	<div>
+	        	<div class="head">
+		          <img src="/images/arrow.png" width="40" height="40"/>
+		          <span>下拉刷新...</span>
+		        </div>
+				    <ul id="shoplist">
+				    	<li v-for="item in list">
+				    		<a href=""><img :src="item.imgSrc"/></a>
+				    		<p>{{item.tip}}</p>
+				    		<p>{{item.title}}</p>
+				    		<ul class="buy">
+				    			<li>{{item.price}}</li>
+				    			<li class="yo-ico">&#xe611;</li>
+				    			<li>购买</li>
+				    		</ul>
+				    	</li>
+				    </ul>
+				    <div class="foot">
+		          <img src="/images/arrow.png" width="40" height="40"/>
+		          <span>上拉加载更多...</span>
+		        </div>
+	        </div>
+			  </div>
+			  <!--<div class="swiper-slide">slider2</div>
+        <div class="swiper-slide">slider3</div>
+        <div class="swiper-slide">slider4</div>-->
+			</div>
+    </div>
+  </div>
+  <footer>
+    
+  </footer>
+</div>
+

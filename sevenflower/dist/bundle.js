@@ -44,13 +44,28 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
-	//引入样式文件
 	__webpack_require__(1);
+	
 	var common = __webpack_require__(5);
-	var html = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./scripts/tpls/classify.html\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	common.render(html);
+	
+	//分类
+	//var classify = require('./scripts/tpls/classify.html');
+	
+	//common.render(classify);
+	
+	//列表
+	//var list = require('./scripts/tpls/list.html');
+	//
+	//common.render(list);
+	
+	//详情
+	var cart = __webpack_require__(6);
+	
+	common.render(cart);
+	
+	//require('./scripts/views/detail.js');
 
 /***/ },
 /* 1 */
@@ -75,6 +90,12 @@
 	};
 	
 	module.exports = common;
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"m-details\" id=\"m-details\">  <div class=\"d-header\">    <ul>    	<li class=\"yo-ico\">&#xe7ec;</li>    	<li>产品详情</li>    </ul>  </div>     <div class=\"d-section\">      </div>  <footer>      </footer></div>"
 
 /***/ }
 /******/ ]);

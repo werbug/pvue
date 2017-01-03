@@ -1,0 +1,56 @@
+<div class="m-index" id="m-index">
+  <header>
+    <ul>
+      <li>
+        <a href="#">七彩鲜花</a>
+      </li>
+      <li class="yo-ico">&#xe60b;</li>
+    </ul>
+  </header>
+
+  <nav>
+    <ul>
+      <li v-on:click="changeTab(index)" :class="{active: index==navIndex}" v-for="(item, index) in nav">{{item}}</li>
+    </ul>
+  </nav>
+  <section>
+    <div class="swiper-container" id="index-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <ul>
+            <li v-for="item in list">
+              <i><img :src="item.imgSrc" /></i>
+              <b>{{item.title}}</b>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper-slide">slider2</div>
+        <div class="swiper-slide">slider3</div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li class="active">
+        <i class="yo-ico">&#xe629;</i>
+        <b>首页</b>
+      </li>
+      <li>
+        <i class="yo-ico">&#xe610;</i>
+        <b>分类</b>
+      </li>
+      <li>
+        <i class="yo-ico">&#xe600;</i>
+        <b>购物车</b>
+      </li>
+      <li>
+        <i class="yo-ico">&#xe607;</i>
+        <b>我的七彩</b>
+      </li>
+      <li>
+        <i class="yo-ico">&#xe67e;</i>
+        <b>帮助中心</b>
+      </li>
+    </ul>
+  </footer>
+</div>

@@ -1,10 +1,10 @@
 @charset "utf-8";
 @import './common.scss';
-.m-index{
+.m-classify{
     @include flexbox();
     @include flex-direction(column);
     height:100%;
-    header{
+    .c-header{
         height:.44rem;
         background: $base-color;
         ul{
@@ -33,7 +33,7 @@
             }
         }
     }
-    section{
+    .c-section{
         background: #fff;
         overflow-y: scroll;
         width: 100%;

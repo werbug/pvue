@@ -1,5 +1,18 @@
-@charset "utf-8";
-//引入样式重置
-@import "./core/reset.scss";
-@import "./module/m-index.scss";
+@charset "UTF-8";
 
+@import "./core/reset";
+
+// module
+//@import "./module/m-index";
+
+//列表页
+@import "./module/m-list";
+
+//分类页
+@import "./module/m-classify";
+
+//详情页
+@import "./module/m-cart";
+
+//帮助中心
+@import "./module/m-help";
