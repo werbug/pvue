@@ -4,7 +4,7 @@ var indexlist = require('./indexlist.json');
 
 module.exports = function() {
     return {
-        "list": list
+        "list": list,
         "indexlist":indexlist
     }
 }
