@@ -5,4 +5,12 @@ var common = {
   }
 }
 
-module.exports = common;
+var page = {
+	render:function (str){
+		var contentWrapper = document.getElementById("contentWrapper");
+		contentWrapper.innnerHTML = str;		
+	}
+}
+
+module.exports.common = common;
+module.exports.page = page;
