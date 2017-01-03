@@ -1,0 +1,42 @@
+<!--列表页-->
+<div class="m-list" id="m-list">
+  <header>
+    <ul>
+    	<li class="yo-ico">&#xe7ec;</li>
+    	<li>分类列表</li>
+    </ul>
+  </header>
+   
+  <section>
+  	<nav>
+	  	<ul>
+	  		<li v-for="(item, index) in nav" v-on:click="changeTab(index)" :class="{active: index==navIndex}"><b>{{item}}</b></li>
+	  	</ul>
+	  </nav>
+    <ul id="list">
+    	<li class="yo-ico" v-on:click="changeTab(index)" :class="{active: index==navIndex}" v-for="(item, index) in listtl">{{item}}&nbsp;&#xe65e;</li>
+    </ul>
+    <div class="swiper-container" id="index-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+			    <ul id="shoplist">
+			    	<li v-for="item in list">
+			    		<a href=""><img :src="item.imgSrc"/></a>
+			    		<p>{{item.tip}}</p>
+			    		<p>{{item.title}}</p>
+			    		<ul class="buy">
+			    			<li>{{item.price}}</li>
+			    			<li class="yo-ico">&#xe611;</li>
+			    			<li>购买</li>
+			    		</ul>
+			    	</li>
+			    </ul>
+			  </div>
+			</div>
+    </div>
+  </section>
+  <footer>
+    
+  </footer>
+</div>
+

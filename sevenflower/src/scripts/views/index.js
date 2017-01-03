@@ -8,7 +8,7 @@ new Vue({
   },
 
   mounted: function () {
-    fetch('/api/list').then(response => response.json())
+    fetch('/api/indexlist').then(response => response.json())
     .then(res => {  
       this.list = res;
       

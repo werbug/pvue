@@ -1309,9 +1309,52 @@ button.swiper-pagination-bullet {
         text-align: center;
         font-size: .24rem;
         color: rgba(255, 255, 255, 0.6); }
+<<<<<<< HEAD
       .m-index header ul li:nth-child(2) a {
         color: #fff;
         font-size: .18rem; }
+=======
+      .m-index header ul li:nth-child(2) {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+<<<<<<< HEAD
+        width: .1px; }
+        .m-index header ul li:nth-child(2) a {
+          color: #fff;
+          font-size: .24rem; }
+  .m-index section {
+    background: #fff;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%; }
+=======
+        width: .1px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        .m-index header ul li:nth-child(2) span {
+          display: inline-block;
+          width: .59rem;
+          height: .25rem;
+          text-align: center;
+          line-height: .25rem;
+          color: rgba(255, 255, 255, 0.6);
+          background: rgba(100, 217, 133, 0.6); }
+          .m-index header ul li:nth-child(2) span:first-child {
+            border-radius: .1rem 0 0 .1rem; }
+          .m-index header ul li:nth-child(2) span:last-child {
+            border-radius: 0 .1rem .1rem 0; }
+          .m-index header ul li:nth-child(2) span.active {
+            background: #64d985;
+            color: #fff; }
+>>>>>>> wxh
   .m-index nav {
     height: .35rem;
     background: #fff;
@@ -1367,12 +1410,44 @@ button.swiper-pagination-bullet {
     width: .1px;
     overflow-y: scroll;
     width: 100%; }
+>>>>>>> master
     .m-index section ul {
       display: -webkit-box;
       display: -webkit-flex;
       display: flex;
       -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
+      width: 100%;
+      height: 100%; }
+      .m-index section ul li {
+        width: 33.33%;
+        height: 33.33%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        .m-index section ul li img {
+          display: block;
+          width: .52rem;
+          height: .52rem;
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          flex: 1;
+          width: .1px; }
+        .m-index section ul li b {
+          display: block;
+          text-align: center;
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          flex: 1;
+          width: .1px; }
+=======
       padding-right: .05rem; }
       .m-index section ul li {
         width: 50%;
@@ -1394,6 +1469,7 @@ button.swiper-pagination-bullet {
           -webkit-flex-direction: column;
           flex-direction: column;
           font-weight: normal; }
+>>>>>>> master
   .m-index footer {
     height: .44rem;
     background: #fff; }

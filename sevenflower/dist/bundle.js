@@ -49,8 +49,12 @@
 	__webpack_require__(1);
 	
 	var common = __webpack_require__(5);
+<<<<<<< HEAD
+	var html = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./scripts/tpls/classify.html\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+=======
 	var html = __webpack_require__(6);
 	
+>>>>>>> master
 	common.render(html);
 	
 	__webpack_require__(7);
@@ -79,6 +83,8 @@
 	
 	module.exports = common;
 
+<<<<<<< HEAD
+=======
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
@@ -1470,6 +1476,7 @@
 	Swiper AMD Export
 	===========================*/if(true){module.exports=window.Swiper;}else if(typeof define==='function'&&define.amd){define([],function(){'use strict';return window.Swiper;});}//# sourceMappingURL=maps/swiper.js.map
 
+>>>>>>> master
 /***/ }
 /******/ ]);
 //# sourceMappingURL=bundle.js.map

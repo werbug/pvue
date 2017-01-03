@@ -1,4 +1,3 @@
-
 //压缩使用
 var webpack = require('webpack');
 //抽离
@@ -34,15 +33,15 @@ module.exports = {
 				loader:ET.extract('style','css!sass')
 			},
 			{
-				test:/\.string/,
-				loader:'string'
+				test:/\.html$/,
+				loader:'html'
 			}
 		]
 	},
 	
 	devServer:{
 		contentBase: __dirname + '/dist',
-		port:80,
+		port:8080,
 		host:'localhost',
 		proxy:{
 			'/api':{
