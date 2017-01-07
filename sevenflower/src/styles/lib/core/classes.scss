@@ -361,13 +361,13 @@
  * @param {String} $border-style 指定边框样式 <2.0.0>
  * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>
  */
-@mixin border($border-width: 1px, $border-color: map-get($base, border-color), $border-style: solid, $radius: null) {
+@mixin border($border-width: 1px, $border-color: map-get($base, border-color), $border-style: solid, $radius1: null,$radius2: null,$radius3: null,$radius4: null) {
     // 为边框位置提供定位参考
     position: relative;
     @if $border-width == null {
         $border-width: 0;
     }
-    border-radius: $radius;
+    border-radius: $radius1 $radius2 $radius3 $radius4;
     &::after {
         // 用以解决边框layer遮盖内容
         pointer-events: none;
@@ -384,25 +384,52 @@
         @include responsive(retina1x) {
             width: 100%;
             height: 100%;
-            @if $radius != null {
-                border-radius: $radius;
-            }
+           @if $radius1 != null {
+                border-radius: $radius1 $radius2 $radius3 $radius4;
+                @if $radius2 != null {
+                    border-radius: $radius1 $radius2 $radius3 $radius4;
+                    @if $radius3 != null{
+                        border-radius: $radius1 $radius2 $radius3 $radius4;
+                        @if $radius4 != null{
+                            border-radius: $radius1 $radius2 $radius3 $radius4;
+                        }
+                    }
+                }
+            } 
         }
         @include responsive(retina2x) {
             width: 200%;
             height: 200%;
             @include transform(scale(.5));
-            @if $radius != null {
-                border-radius: $radius * 2;
-            }
+            @if $radius1 != null {
+                border-radius: $radius1*2 $radius2 $radius3 $radius4;
+                @if $radius2 != null {
+                    border-radius: $radius1*2 $radius2*2 $radius3 $radius4;
+                    @if $radius3 != null{
+                        border-radius: $radius1*2 $radius2*2 $radius3*2 $radius4;
+                        @if $radius4 != null{
+                            border-radius: $radius1*2 $radius2*2 $radius3*2 $radius4*2;
+                        }
+                    }
+                }
+            } 
         }
         @include responsive(retina3x) {
             width: 300%;
             height: 300%;
             @include transform(scale(.33333));
-            @if $radius != null {
-                border-radius: $radius * 3;
-            }
+            @if $radius1 != null {
+                border-radius: $radius1*3 $radius2 $radius3 $radius4;
+                @if $radius2 != null {
+                    border-radius: $radius1*3 $radius2*3 $radius3 $radius4;
+                    @if $radius3 != null{
+                        border-radius: $radius1*3 $radius2*3 $radius3*3 $radius4;
+                        @if $radius4 != null{
+                            border-radius: $radius1*3 $radius2*3 $radius3*3 $radius4*3;
+                        }
+                    }
+                }
+            } 
         }
         @include transform-origin(0 0);
     }

@@ -1,0 +1,40 @@
+{
+	"t1":{
+		
+			"ban":[
+				"/images/m_banner1.jpg",
+				"/images/m_banner2.jpg",
+				"/images/m_banner3.jpg",
+				"/images/m_banner4.jpg"
+			],
+			"introduce":{
+				"name":"初见",
+				"num":"072098",
+				"price":"¥308",
+				"discount":"¥288"
+			},
+			"information":{
+				"material":"9支玫瑰",
+				"wrapper":"粉色卷边纸多层精美包装",
+				"language":"对你最初的印象，久久难以忘怀。First impression of you is most lasting.",
+				"occasion":"生日,恋情,祝福,探望,道歉,接待"
+			},
+			"details_img":[
+				"/images/0720984201.jpg",
+				"/images/0720984202.jpg",
+				"/images/0720984203.jpg",
+				"/images/0720984204.jpg"
+			],
+			"details_comment":{
+				"detailslogo":"/images/detailslogo.png",
+				"name":"于",
+				"comment":"地址改了好几次，也送到了，很满意"
+			}
+				
+			
+		
+		
+	}
+
+
+}

@@ -1,3 +1,6 @@
+@charset "utf-8";
+@import "./common";
+
 #m-details{
     @include flexbox();
     @include flex-direction(column);
@@ -13,9 +16,9 @@ header{
         display: inline-block;
         height: .40rem;
         line-height: .40rem;
-        margin-left:.2rem;
+        margin-left:0rem;
     }
-    a{
+    .details_h_a{
         display: inline-block;
         height:.40rem;
         line-height: .40rem;
@@ -27,24 +30,31 @@ header{
     }
 }
 
-#banner{
+//主体部分
+section{
+    @include flex();
+    width:100%;
+    overflow-y:scroll;
+#bannerdetails{
+    @include flex();
     width:3.75rem;
     height:3.01rem;
 }
 
 
 
-section{
+#con{
+    background: #f3f3f3;
     
     article{
-        @include border(1px 0 1px 0,#dcdcdc);
-        background: #f6f6f6;
         overflow: hidden;
         ul{
             @include flexbox();
             @include flex-wrap(wrap);
             padding:0 .1rem;
             padding-bottom: .1rem;
+            margin-bottom: .05rem;
+            @include border(1px 0 1px 0,#000);
             li{
                 width:50%;
                 color:#ff5151;
@@ -125,8 +135,111 @@ section{
             }
         }
     }//article end
+    
+    #information{
+        padding:0 .1rem;
+        ul{
+            li{
+                @include flexbox();
+                @include justify-content(flex-start);
+                margin-top:.03rem;
+                span{                   
+                    height:.25rem;
+                    font-size:.14rem;
+                    line-height: .25rem;                   
+                    font-size: #373737;
+                }
+                p{                 
+                    width:2.50rem;
+                    font-size:.14rem;
+                    font-size:#373737;
+                    line-height: .25rem; 
+                   
+                }
+            }
+        }
+        
+    }//#information end
+    .details_img{
+        figure{
+            img{
+                width:100%;
+            }
+        }
+    }//.details_img end
+    .details_comment{
+        summary{
+            font-size: .14rem;
+            color:#f15353;
+            height: .35rem;
+            padding:0 .1rem;
+            line-height: .35rem;
+            @include border(0 0 1px 0,#d7d7d7);
+        }
+        figure{
+            @include flexbox();
+            @include justify-content(flex-start);
+            @include border(0 0 1px 0,#d7d7d7);
+            img{
+                width: .49rem;
+                height: .49rem;
+                margin:.1rem;
+            }
+            figcaption{
+                width:100%;
+                div{
+                    margin:0;
+                    margin-top:.1rem;
+                    width:100%;
+                    height: .2rem;                   
+                    span{
+                        background: url(/images/detailsxing.png) no-repeat left top;
+                        background-size: cover;
+                        width:.76rem;
+                        height:.13rem;
+                        display: inline-block;
+                    }
+                    b{
+                        float:right;
+                        
+                    }
+                }
+                p{
+                    
+                }
+            }
+        }//figure end
+        .details_comment_bottom{
+            height: .4rem;
+            text-align: center;
+            line-height: .4rem;
+            padding:0;
+            margin:.1rem .1rem 0 .1rem;
+            @include border(1px 1px 1px 1px,#d7d7d7);
+            @include border-radius(.05rem);
+            color:#999;
+            span{
+                color:#f15353;
+                
+            }
+        }//.details_comment_bottom end
+        .details_comment_help{
+            overflow: hidden;
+            @include flexbox();
+            @include justify-content(space-between);
+            height:auto;
+            a{
+                color:#999;
+                width:1.72rem;
+                margin:0;
+                background: #f3f3f3;
+                @include border(1px 1px 1px 1px,#d7d7d7);
+                @include border-radius(.05rem);
+            }
+        }//.details_comment_help end
+    }//.details_comment end
+}//#con end
 }//section end
-
 footer{
     
     

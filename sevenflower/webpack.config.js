@@ -25,7 +25,7 @@ module.exports = {
 				loader:'babel?presets[]=es2015'
 				//loader: 'babel',
 				/*query:{
-					"presets:['es2015']"
+					"presets":['es2015']
 				}*/
 			}
 			,{
@@ -34,12 +34,22 @@ module.exports = {
 				loader:ET.extract('style','css!sass')
 			},
 			{
-				test:/\.html/,
+				test:/\.string$/,
 				loader:'string'
+			},{
+				test:/\.vue$/,
+				loader:'vue'
 			}
 		]
 	},
-	
+	vue: {
+	    loaders: {
+	      	js: 'babel',
+		    query: {
+		        "presets": ['es2015']
+		    }
+	    }
+	},
 	devServer:{
 		contentBase: __dirname + '/dist',
 		port:80,
@@ -55,7 +65,7 @@ module.exports = {
 	},
 	
 	plugins:[
-		//new webpack.optimize.UglifyJsPlugin(),
+		new webpack.optimize.UglifyJsPlugin(),
 		new ET('bundle.css')
 	]
 	
