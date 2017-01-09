@@ -2,52 +2,12 @@
 	<div class="m-help" id="m-help">
 	  <div class="h-section">
 	    <ul class="help">
-	    	<li>
-	    		<a href="">购物指南</a>
+	    	<li v-for="item in list">
+	    		<a href="">{{item.titel}}</a>
 	    		<ul class="way">
-	    			<li>购物流程</li>
-	    			<li>会员介绍</li>
-	    			<li>联系客服</li>
-	    		</ul>
-	    	</li>
-	    	<li>
-	    		<a href="">配送方式</a>
-	    		<ul class="way">
-	    			<li>送货上门</li>
-	    			<li>门店自取</li>
-	    			<li>配送范围</li>
-	    		</ul>
-	    	</li>
-	    	<li>
-	    		<a href="">支付方式</a>
-	    		<ul class="way">
-	    			<li>在线支付</li>
-	    			<li>银行汇款</li>
-	    			<li>货到付款</li>
-	    		</ul>
-	    	</li>
-	    	<li>
-	    		<a href="">服务支持</a>
-	    		<ul class="way">
-	    			<li>售后服务</li>
-	    			<li>退款说明</li>
-	    			<li>取消订单</li>
-	    		</ul>
-	    	</li>
-	    	<li>
-	    		<a href="">关注我们</a>
-	    		<ul class="way">
-	    			<li>微信公众号</li>
-	    			<li>七彩鲜花APP</li>
-	    			<li>七夕特别提示</li>
-	    		</ul>
-	    	</li>
-	    	<li>
-	    		<a href="">联系我们</a>
-	    		<ul class="way">
-	    			<li>联系我们</li>
-	    			<li></li>
-	    			<li></li>
+	    			<li>{{item.name1}}</li>
+	    			<li>{{item.name2}}</li>
+	    			<li>{{item.name3}}</li>
 	    		</ul>
 	    	</li>
 	    </ul>
@@ -58,3 +18,49 @@
 	  </div>
 	</div>
 </template>
+<script>
+	module.exports = {
+		data: function(){
+			return {
+				list:[
+					{
+						titel:"购物指南",
+						name1:"购物流程",
+						name2:"会员介绍",
+						name3:"联系客服"
+					},
+					{
+						titel:"配送方式",
+						name1:"送货上门",
+						name2:"门店自取",
+						name3:"配送范围"
+					},
+					{
+						titel:"支付方式",
+						name1:"在线支付",
+						name2:"银行汇款",
+						name3:"货到付款"
+					},
+					{
+						titel:"服务支持",
+						name1:"售后服务",
+						name2:"退款说明",
+						name3:"取消订单"
+					},
+					{
+						titel:"关注我们",
+						name1:"微信公众号",
+						name2:"七彩鲜花APP",
+						name3:"七夕特别提示"
+					},
+					{
+						titel:"联系我们",
+						name1:"联系我们",
+						name2:"",
+						name3:""
+					}
+				]
+			}
+		}
+	}
+</script>

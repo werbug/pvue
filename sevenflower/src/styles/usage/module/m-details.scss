@@ -37,8 +37,17 @@ section{
     overflow-y:scroll;
 #bannerdetails{
     @include flex();
-    width:3.75rem;
+    width:100%;
     height:3.01rem;
+    .swiper-wrapper{
+        width:100%;
+        height: 100%;
+        .swiper-slide{
+            width:100%;
+            height: 100%;
+            background-size: 100% 100%;
+        }
+    }
 }
 
 

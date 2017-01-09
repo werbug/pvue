@@ -11,23 +11,21 @@
 			<!-- 内容 -->
 			<div class="swiper-wrapper">
 	
-				<div class="swiper-slide swiper-lazy" data-background="/images/slide1.jpg">
-					<img src="images/slide1.jpg" />
-					<!-- 延迟加载 -->
+				<!--<div class="swiper-slide" v-for="item in ban">
+					<img :src="item" alt="" class="swiper-lazy" />
+				</div>-->
+				<div class="swiper-slide swiper-lazy" data-background="/images/0720984201.jpg">	
 					<div class="swiper-lazy-preloader"></div>
 				</div>
-				<div class="swiper-slide swiper-lazy" data-background="/images/slide2.jpg">
-	
-					<div class="swiper-lazy-preloader"></div>
-				</div>
-	
-				<div class="swiper-slide swiper-lazy" data-background="/images/slide3.jpg">
-	
+				<div class="swiper-slide swiper-lazy" data-background="/images/0720984202.jpg">	
 					<div class="swiper-lazy-preloader"></div>
 				</div>
 	
-				<div class="swiper-slide swiper-lazy" data-background="/images/slide4.jpg">
+				<div class="swiper-slide swiper-lazy" data-background="/images/0720984203.jpg">	
+					<div class="swiper-lazy-preloader"></div>
+				</div>
 	
+				<div class="swiper-slide swiper-lazy" data-background="/images/0720984204.jpg">	
 					<div class="swiper-lazy-preloader"></div>
 				</div>
 	
@@ -40,10 +38,10 @@
 		<div id="con">
 			<article>
 				<ul>
-					<li><span>名称:</span><b v-html="det.introduce"></b></li>
-					<li><span>编号:</span><b>072098</b></li>
-					<li><span>价格:</span><del>¥308</del></li>
-					<li><img src='/images/zhe_ico.png' alt="" /><strong>¥288</strong></li>
+					<li><span>名称:</span><b>{{introduce.name}}</b></li>
+					<li><span>编号:</span><b>{{introduce.num}}</b></li>
+					<li><span>价格:</span><del>{{introduce.price}}</del></li>
+					<li><img src='/images/zhe_ico.png' alt="" /><strong>{{introduce.discount}}</strong></li>
 					<li>新用户下单立减20元</li>
 				</ul>
 				<a href="javascript:;">加入购物车</a>
@@ -56,54 +54,31 @@
 			</article>
 			<div id="information">
 				<ul>
-					<li>
-						<span>材料：</span>
-						<p>9支红玫瑰</p>					
-					</li>
-					<li>
-						<span>包装：</span>
-						<p>粉色卷边纸多层精美包装</p>					
-					</li>
-					<li>
-						<span>花语：</span>
-						<p>对你最初的印象，久久难以忘怀。First impression of you is most lasting.</p>					
-					</li>
-					<li>
-						<span>场合：</span>
-						<p>生日,恋情,祝福,探望,道歉,接待</p>					
+					<li v-for="item in information">
+						<span>{{item.title}}</span>
+						<p>{{item.content}}</p>					
 					</li>
 				</ul>
 			</div><!--information end-->
 			<article class="details_img">
 				<figure>
-					<img src="/images/0720984201.jpg" alt="" />
-					<img src="/images/0720984202.jpg" alt="" />
-					<img src="/images/0720984203.jpg" alt="" />
-					<img src="/images/0720984204.jpg" alt="" />
+					<img :src="item" alt="" v-for="item in details_img"/>
+					
 				</figure>
 			</article>
 			<article class="details_comment">
 				<summary>评论</summary>
-				<figure>
-					<img src="/images/detailslogo.png" alt="" />
+				<figure v-for="item in details_comment">
+					<img :src="item.detailslogo" alt="" />
 					<figcaption>
 						<div>
 							<span></span>
-							<b>于</b>
+							<b>{{item.name}}</b>
 						</div>
-						<p>地址改了好几次，也送到了，很满意</p>
+						<p>{{item.comment}}</p>
 					</figcaption>
 				</figure>
-				<figure>
-					<img src="/images/detailslogo.png" alt="" />
-					<figcaption>
-						<div>
-							<span></span>
-							<b>于</b>
-						</div>
-						<p>地址改了好几次，也送到了，很满意</p>
-					</figcaption>
-				</figure>
+				
 				<div class="details_comment_bottom">
 					最近已有<span>21067</span>人评论
 				</div>
@@ -140,19 +115,43 @@ module.exports = {
 	data:function(){
 		return {
 			det:[],
+			ban:null,
+			introduce:[],
+			information:null,
+			details_img:null,
+			details_comment:null,
+			
 			
 		}
 	},
+	
 	mounted:function(){
 		common.mySwiper('bannerdetails');
+	/*	var mySwiper = new Swiper('.swiper-container',{
+			autoplay : 1000,
+			autoplayDisableOnInteraction : false,
+			})
+			$('#btn1').click(function(){
+			mySwiper.params.autoplay=200;
+		})*/
+		console.log(bannerdetails);
 		fetch('/api/details').then(response => response.json())
 		.then(res => {
-			console.log(res);
+			//console.log(res);
+			//console.log(this.$route.params.id)
+			this.det = res[this.$route.params.id];
+			this.ban = this.det.ban;
+			this.introduce = this.det.introduce;
+			this.information = this.det.information;
+			this.details_img = this.det.details_img;
+			this.details_comment = this.det.details_comment;			
 			
 		})
 		.catch(e => console.log("details error",e));
 		
 	}
+	
+	
 	
 }//module end
 /*export default {

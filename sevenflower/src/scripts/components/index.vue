@@ -60,11 +60,11 @@
 					ico: '&#xe629;',
 					title: '首页'
 				}, {
-					router: '/page',
+					router: '/classify',
 					ico: '&#xe610;',
 					title: '分类'
 				}, {
-					router: '/page',
+					router: '/cart',
 					ico: '&#xe600;',
 					title: '购物车'
 				}, {

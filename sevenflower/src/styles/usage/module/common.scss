@@ -8,6 +8,15 @@ $base-color: #dd2727;
   url('//at.alicdn.com/t/font_h6psrvddyghnnrk9.svg#iconfont') format('svg');
 }
 
+@font-face {
+  font-family: 'yofont';  /* project id 212968 */
+  src: url('//at.alicdn.com/t/font_qcmy7nwcw0cnmi.eot');
+  src: url('//at.alicdn.com/t/font_qcmy7nwcw0cnmi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_qcmy7nwcw0cnmi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_qcmy7nwcw0cnmi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_qcmy7nwcw0cnmi.svg#iconfont') format('svg');
+}
+
 @import "../../lib/core/reset.scss";
 b{
     font-weight: normal;

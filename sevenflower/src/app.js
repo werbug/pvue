@@ -10,12 +10,12 @@ common.render(layout);
 //组件
 import index from "./scripts/components/index.vue";
 import home from "./scripts/components/home.vue";
-import page from "./scripts/components/page.vue";
 import cart from "./scripts/components/cart.vue";
 import help from "./scripts/components/help.vue";
 import my from "./scripts/components/my.vue";
 import details from "./scripts/components/details.vue";
-
+import classify from "./scripts/components/classify.vue";
+import list from "./scripts/components/list.vue"
 //vue router 2
 const routes = [{
 	path:'/',
@@ -24,14 +24,17 @@ const routes = [{
 		path:'/',
 		component:home
 	},{
-		path:'/page',
-		component:page
+		path:'/classify',
+		component:classify
 	},{
 		path:'/cart',
 		component:cart
 	},{
 		path:'/help',
 		component:help
+	},{
+		path: '/list',
+		component: list
 	}]
 	
 },{
@@ -49,3 +52,17 @@ const router = new VueRouter({
 const app = new Vue({
 	router
 }).$mount('#app');
+
+const store = new Vuex.Store({
+	state:{
+		count : 0
+	},
+	 mutations: {
+	    increment (state,n) {
+	      state.count += n
+	    }
+	  }
+})
+store.commit('increment',10)
+
+console.log(store.state.count)
