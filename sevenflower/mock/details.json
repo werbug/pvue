@@ -1,0 +1,148 @@
+{
+	"t1":{
+		
+			"ban":[
+				"/images/0720984201.jpg",
+				"/images/0720984202.jpg",
+				"/images/0720984203.jpg",
+				"/images/0720984204.jpg"
+			],
+			"introduce":{
+				"name":"初见",
+				"num":"072098",
+				"price":"¥308",
+				"discount":"¥288"
+			},
+			"information":[
+				{
+					"title":"材料：",
+					"content":"9支玫瑰"
+				},
+				{
+					"title":"包装：",
+					"content":"粉色卷边纸多层精美包装"
+				},
+				{
+					"title":"花语：",
+					"content":"对你最初的印象，久久难以忘怀。First impression of you is most lasting."
+				},
+				{
+					"title":"场合：",
+					"content":"生日,恋情,祝福,探望,道歉,接待"
+				}
+				
+			],
+			"details_img":[
+				"/images/0720984201.jpg",
+				"/images/0720984202.jpg",
+				"/images/0720984203.jpg",
+				"/images/0720984204.jpg"
+			],
+			"details_comment":[
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"于",
+					"comment":"地址改了好几次，也送到了，很满意"
+				},
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"李",
+					"comment":"好评好评好评好评"
+				},
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"王",
+					"comment":"垃圾垃圾垃圾啊垃圾，再也不买了，什么玩意"
+				},
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"张",
+					"comment":"你能忍吗？"
+				},
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"政",
+					"comment":"非常不错以后就认准它了"
+				}
+			
+			]
+				
+			
+		
+		
+	},
+	"t2":{
+		
+			"ban":[
+				"/images/m_banner1.jpg",
+				"/images/m_banner2.jpg",
+				"/images/m_banner3.jpg",
+				"/images/m_banner4.jpg"
+			],
+			"introduce":{
+				"name":"初见",
+				"num":"072098",
+				"price":"¥308",
+				"discount":"¥288"
+			},
+			"information":[
+				{
+					"title":"材料：",
+					"content":"9支玫瑰"
+				},
+				{
+					"title":"包装：",
+					"content":"粉色卷边纸多层精美包装"
+				},
+				{
+					"title":"花语：",
+					"content":"对你最初的印象，久久难以忘怀。First impression of you is most lasting."
+				},
+				{
+					"title":"场合：",
+					"content":"生日,恋情,祝福,探望,道歉,接待"
+				}
+				
+			],
+			"details_img":[
+				"/images/0720984201.jpg",
+				"/images/0720984202.jpg",
+				"/images/0720984203.jpg",
+				"/images/0720984204.jpg"
+			],
+			"details_comment":[
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"于",
+					"comment":"地址改了好几次，也送到了，很满意"
+				},
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"李",
+					"comment":"好评好评好评好评"
+				},
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"王",
+					"comment":"垃圾垃圾垃圾啊垃圾，再也不买了，什么玩意"
+				},
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"张",
+					"comment":"你能忍吗？"
+				},
+				{
+					"detailslogo":"/images/detailslogo.png",
+					"name":"政",
+					"comment":"非常不错以后就认准它了"
+				}
+			
+			]
+				
+			
+		
+		
+	}
+
+
+}
